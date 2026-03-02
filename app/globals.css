@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-500: #f97316;
+  --orange-600: #ea580c;
+  --brown-900: #3f2305;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+@layer base {
+  :root {
+    --background: var(--orange-50);
+    --foreground: var(--brown-900);
+
+    --card: var(--orange-100);
+    --card-foreground: var(--brown-900);
+
+    --popover: var(--orange-50);
+    --popover-foreground: var(--brown-900);
+
+    --primary: var(--orange-500);
+    --primary-foreground: var(--orange-50);
+
+    --secondary: var(--orange-100);
+    --secondary-foreground: var(--brown-900);
+
+    --muted: var(--orange-100);
+    --muted-foreground: var(--brown-900);
+
+    --accent: var(--orange-100);
+    --accent-foreground: var(--brown-900);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--orange-50);
+
+    --border: var(--orange-200);
+    --input: var(--orange-200);
+    --ring: var(--orange-500);
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
