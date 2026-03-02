@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import { useState } from "react"
@@ -25,10 +26,19 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex flex-col">
-            <Link href="/" className="text-2xl font-bold text-[#FF5C00]">
-              Africa Day
+            <Link href="/" className="flex items-center gap-3 group">
+              <Image
+                src="/logo.png"
+                alt="Africa Day Logo"
+                width={50}
+                height={50}
+                className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              />
+              <div className="flex flex-col justify-center">
+                <span className="text-xl font-bold text-[#FF5C00] leading-tight">Africa Day</span>
+                <span className="text-[10px] text-gray-600 leading-tight">Abraham D. Ministry Foundation</span>
+              </div>
             </Link>
-            <span className="text-xs text-gray-600">Abraham D. Ministry Foundation</span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-6">

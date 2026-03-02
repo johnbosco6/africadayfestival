@@ -8,8 +8,10 @@ import Link from "next/link"
 import { Music, Camera, Utensils, Users, Film, Palette } from "lucide-react"
 import { Statistics } from "@/components/statistics"
 import { FeaturedEvents } from "@/components/featured-events"
-// Import the GlassmorphismCountdown component at the top of the file
 import { GlassmorphismCountdown } from "@/components/glassmorphism-countdown"
+import { InteractiveMap } from "@/components/interactive-map"
+import { FestivalTimeline } from "@/components/festival-timeline"
+import { WorkshopQuiz } from "@/components/workshop-quiz"
 
 export default function Home() {
   const { t } = useTranslation()
@@ -72,13 +74,12 @@ export default function Home() {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-              index === currentImageIndex
-                ? "opacity-100 scale-100 translate-y-0 z-10"
-                : index === (currentImageIndex - 1 + images.length) % images.length
-                  ? "opacity-0 scale-105 -translate-y-4 z-0"
-                  : "opacity-0 scale-95 translate-y-4 z-0"
-            }`}
+            className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentImageIndex
+              ? "opacity-100 scale-100 translate-y-0 z-10"
+              : index === (currentImageIndex - 1 + images.length) % images.length
+                ? "opacity-0 scale-105 -translate-y-4 z-0"
+                : "opacity-0 scale-95 translate-y-4 z-0"
+              }`}
           >
             <Image
               src={image || "/placeholder.svg"}
@@ -182,6 +183,12 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Interactive Cultural Map */}
+      <InteractiveMap />
+
+      {/* Festival Timeline */}
+      <FestivalTimeline />
+
       {/* Cultural Impact Section */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -196,6 +203,9 @@ export default function Home() {
           <Statistics />
         </div>
       </div>
+
+      {/* Workshop Quiz */}
+      <WorkshopQuiz />
 
       {/* Featured Events Section */}
       <div className="bg-[#FFF5EB] py-16">

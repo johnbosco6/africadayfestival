@@ -3,6 +3,7 @@
 import type React from "react"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Instagram, Youtube } from "lucide-react"
 import { useState } from "react"
 import { Input } from "@/components/ui/input"
@@ -52,7 +53,16 @@ export function Footer() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid md:grid-cols-6 gap-8">
           <div>
-            <h3 className="text-xl font-serif mb-4">Africa Day Festival</h3>
+            <Link href="/" className="block mb-4 group">
+              <Image
+                src="/logo.png"
+                alt="Africa Day Logo"
+                width={80}
+                height={80}
+                className="h-20 w-auto object-contain brightness-0 invert"
+              />
+            </Link>
+            <h3 className="text-xl font-serif mb-2">Africa Day Festival</h3>
             <p className="text-sm text-gray-300">Celebrating African Culture, Creativity, and Commerce</p>
           </div>
           <div>

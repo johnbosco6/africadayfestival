@@ -3,9 +3,12 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { DeveloperAcknowledgment } from "@/components/developer-acknowledgment"
 import { LanguageProvider } from "@/hooks/useTranslation"
 import { Analytics } from "@vercel/analytics/react"
 import { CookiesBanner } from "@/components/cookies-banner"
+import { WelcomeBanner } from "@/components/welcome-banner"
+import { AudioPlayer } from "@/components/audio-player"
 import type React from "react"
 import { Suspense } from "react"
 
@@ -17,11 +20,11 @@ export const metadata: Metadata = {
   icons: [
     {
       rel: "icon",
-      type: "image/svg+xml",
-      url: "/favicon.svg",
+      type: "image/png",
+      url: "/logo.png",
     },
   ],
-    generator: 'v0.app'
+  generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -32,16 +35,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/logo.png" />
         <meta name="google-site-verification" content="jwbt53VNwEySAucjOB4Rd_a4ZwkFaoGldgX14NmWQnU" />
       </head>
       <body className={`${inter.className} bg-white`}>
         <LanguageProvider>
           <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+            <WelcomeBanner />
             <Header />
             <main>{children}</main>
+            <DeveloperAcknowledgment />
             <Footer />
             <CookiesBanner />
+            <AudioPlayer />
           </Suspense>
           <Analytics />
         </LanguageProvider>
