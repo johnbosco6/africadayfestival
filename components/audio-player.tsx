@@ -18,8 +18,8 @@ declare global {
 export function AudioPlayer() {
     const [isPlaying, setIsPlaying] = useState(false)
     const [isPlayerReady, setIsPlayerReady] = useState(false)
+    const [hasManuallyStopped, setHasManuallyStopped] = useState(false)
     const playerRef = useRef<any>(null)
-    const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         // 1. Load the YouTube IFrame Player API code asynchronously.
@@ -55,7 +55,9 @@ export function AudioPlayer() {
                         setIsPlayerReady(true)
                         // Attempt to autoplay the music as soon as the player is ready.
                         // Note: Browsers may block this if the user hasn't interacted with the page yet.
-                        playerRef.current.playVideo()
+                        if (!hasManuallyStopped) {
+                            playerRef.current.playVideo()
+                        }
                     },
                     onStateChange: (event: any) => {
                         // YT.PlayerState.PLAYING = 1
@@ -70,12 +72,12 @@ export function AudioPlayer() {
         return () => {
             // Cleanup if needed
         }
-    }, [])
+    }, [hasManuallyStopped])
 
     useEffect(() => {
         // Auto-unlock music on first interaction (required for mobile sound)
         const unlockAudio = () => {
-            if (isPlayerReady && playerRef.current && !isPlaying) {
+            if (isPlayerReady && playerRef.current && !isPlaying && !hasManuallyStopped) {
                 playerRef.current.playVideo()
                 cleanup()
             }
@@ -86,20 +88,22 @@ export function AudioPlayer() {
             window.removeEventListener("mousedown", unlockAudio)
         }
 
-        if (!isPlaying) {
+        if (!isPlaying && !hasManuallyStopped) {
             window.addEventListener("touchstart", unlockAudio, { passive: true })
             window.addEventListener("mousedown", unlockAudio, { passive: true })
         }
 
         return cleanup
-    }, [isPlayerReady, isPlaying])
+    }, [isPlayerReady, isPlaying, hasManuallyStopped])
 
     const toggle = () => {
         if (!isPlayerReady || !playerRef.current) return
 
         if (isPlaying) {
+            setHasManuallyStopped(true)
             playerRef.current.pauseVideo()
         } else {
+            setHasManuallyStopped(false)
             // Explicitly calling playVideo here is a "user gesture" 
             // which mobile browsers (iOS/Android) will respect.
             playerRef.current.playVideo()
