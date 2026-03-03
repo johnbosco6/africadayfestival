@@ -51,7 +51,12 @@ export function AudioPlayer() {
                     playsinline: 1, // Crucial for mobile background play
                 },
                 events: {
-                    onReady: () => setIsPlayerReady(true),
+                    onReady: () => {
+                        setIsPlayerReady(true)
+                        // Attempt to autoplay the music as soon as the player is ready.
+                        // Note: Browsers may block this if the user hasn't interacted with the page yet.
+                        playerRef.current.playVideo()
+                    },
                     onStateChange: (event: any) => {
                         // YT.PlayerState.PLAYING = 1
                         if (event.data === 1) setIsPlaying(true)
