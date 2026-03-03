@@ -5,59 +5,57 @@ import { motion, useInView } from "framer-motion"
 
 const timeline = [
     {
-        time: "10:00 AM",
-        title: "Opening Ceremony",
+        time: "Friday – Official Opening",
+        title: "Grand Opening Ceremony",
         description:
-            "The festival kicks off with a vibrant opening ceremony featuring traditional African drumming and a welcome address.",
-        emoji: "🥁",
+            "Official welcome addresses and presentation of participating African countries with artistic performances (music, dance, poetry).",
+        emoji: "🌍",
         color: "#c8392b",
     },
     {
-        time: "11:00 AM",
-        title: "African Fashion Runway",
+        time: "Friday, 19:00",
+        title: "African Gala Banquet",
         description:
-            "International models showcase stunning African-designed garments, from Kente cloth to contemporary Ankara prints.",
-        emoji: "👗",
+            "An elegant evening of culinary experience, live music, cultural ambiance, and diplomatic & business networking.",
+        emoji: "🥂",
         color: "#e67e22",
     },
     {
-        time: "1:00 PM",
-        title: "Culinary Workshops",
+        time: "Saturday, 10:00",
+        title: "Africa–Poland Cooperation Forum",
         description:
-            "Hands-on cooking experiences explore the rich flavours of African cuisine — from jollof rice to tagine.",
-        emoji: "🍲",
+            "Culture • Business • Science • Innovation. Panel discussions, spotlight pitches, and academic collaboration opportunities.",
+        emoji: "🤝",
         color: "#f39c12",
     },
     {
-        time: "3:00 PM",
-        title: "Cultural Dance & Music",
-        description:
-            "Live performances featuring Afrobeats, Highlife, and traditional dances from across the continent.",
-        emoji: "🎵",
+        time: "Saturday, 13:00",
+        title: "Networking Lunch",
+        description: "Continuing the discussions over an authentic African lunch.",
+        emoji: "🍲",
         color: "#27ae60",
     },
     {
-        time: "5:00 PM",
-        title: "Community Programs Expo",
+        time: "Saturday, 14:00",
+        title: "African Flag Parade",
         description:
-            "Explore our ongoing programs — from the French Club to the Programming Club and Internship opportunities.",
-        emoji: "🤝",
+            "A vibrant procession celebrating African unity and diversity at Plac Litewski, Lublin.",
+        emoji: "🚩",
         color: "#2980b9",
     },
     {
-        time: "7:00 PM",
-        title: "Film & Art Showcase",
+        time: "Saturday, 15:00",
+        title: "Africa Day Grand Celebration",
         description:
-            "African films, photography exhibitions, and visual art installations from emerging and established artists.",
-        emoji: "🎬",
+            "Live concerts, traditional dance, fashion showcase, youth performances, and a cultural village with food and crafts.",
+        emoji: "🎸",
         color: "#8e44ad",
     },
     {
-        time: "9:00 PM",
-        title: "Grand Concert",
-        description:
-            "The festival concludes with a spectacular concert featuring top African artists performing under the stars.",
-        emoji: "🌟",
+        time: "Saturday, 20:00",
+        title: "Closing Ceremony",
+        description: "A final celebration to mark the end of the 2026 Africa Day Festival.",
+        emoji: "✨",
         color: "#c8392b",
     },
 ]
@@ -195,10 +193,10 @@ export function FestivalTimeline() {
                     <span className="text-xs font-bold uppercase tracking-widest text-orange-500 mb-2 block">
                         Experience
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">A Day in the Life</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Event 2026</h2>
                     <p className="text-gray-500 max-w-xl mx-auto text-sm md:text-base">
-                        Here&apos;s what a full day at the Africa Day Festival looks like. Something for everyone,
-                        from sunrise to starlight.
+                        Here is a more engaging and dynamic version of our program — concise, but richer,
+                        more attractive, and with better flow and energy building toward Saturday’s big celebration.
                     </p>
                 </div>
 
