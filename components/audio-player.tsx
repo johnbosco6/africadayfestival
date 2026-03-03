@@ -72,6 +72,28 @@ export function AudioPlayer() {
         }
     }, [])
 
+    useEffect(() => {
+        // Auto-unlock music on first interaction (required for mobile sound)
+        const unlockAudio = () => {
+            if (isPlayerReady && playerRef.current && !isPlaying) {
+                playerRef.current.playVideo()
+                cleanup()
+            }
+        }
+
+        const cleanup = () => {
+            window.removeEventListener("touchstart", unlockAudio)
+            window.removeEventListener("mousedown", unlockAudio)
+        }
+
+        if (!isPlaying) {
+            window.addEventListener("touchstart", unlockAudio, { passive: true })
+            window.addEventListener("mousedown", unlockAudio, { passive: true })
+        }
+
+        return cleanup
+    }, [isPlayerReady, isPlaying])
+
     const toggle = () => {
         if (!isPlayerReady || !playerRef.current) return
 
