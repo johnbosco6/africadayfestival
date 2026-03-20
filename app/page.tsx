@@ -9,9 +9,7 @@ import { Music, Camera, Utensils, Users, Film, Palette } from "lucide-react"
 import { Statistics } from "@/components/statistics"
 import { FeaturedEvents } from "@/components/featured-events"
 import { GlassmorphismCountdown } from "@/components/glassmorphism-countdown"
-import { InteractiveMap } from "@/components/interactive-map"
 import { FestivalTimeline } from "@/components/festival-timeline"
-import { WorkshopQuiz } from "@/components/workshop-quiz"
 
 export default function Home() {
   const { t } = useTranslation()
@@ -183,8 +181,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Interactive Cultural Map */}
-      <InteractiveMap />
+      {/* Festival Timeline */}
 
       {/* Festival Timeline */}
       <FestivalTimeline />
@@ -204,8 +201,24 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Workshop Quiz */}
-      <WorkshopQuiz />
+      {/* Get Involved CTA */}
+      <div className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Get Involved</h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Join the journey! Whether you want to volunteer, perform, or partner with us, we'd love to have you.
+          </p>
+          <Button asChild className="bg-[#FF5C00] hover:bg-[#FF7A33] text-white text-xl py-8 px-12 h-auto rounded-full shadow-2xl transition-transform hover:scale-105">
+            <a 
+              href="https://docs.google.com/forms/d/1qaJcDo5zH8dskXX9439oPzucK4_87TeEkfBPfykU-0E/viewform" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Apply Now
+            </a>
+          </Button>
+        </div>
+      </div>
 
       {/* Featured Events Section */}
       <div className="bg-[#FFF5EB] py-16">

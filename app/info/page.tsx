@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button"
 import { MapPin, Calendar, Clock, Ticket, Info, Hotel } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { AccommodationSection } from "@/components/accommodation-section"
+import type React from "react"
 
 const scheduleData = {
   friday: {
@@ -233,6 +235,8 @@ export default function FestivalInfoPage() {
           </Card>
         </section>
       </div>
+
+      <AccommodationSection />
 
       <section className="bg-orange-100 rounded-2xl p-8 text-center mb-16">
         <h2 className="text-3xl font-serif mb-6">Conclusion & Next Steps</h2>

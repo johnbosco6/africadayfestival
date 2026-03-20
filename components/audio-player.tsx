@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Music } from "lucide-react"
 
-// "Circle of Life" – The Lion King (Official YouTube)
-const YOUTUBE_ID = "GibiNy4d4gc"
+// "Angel" – Akon (Official YouTube)
+const YOUTUBE_ID = "PEMD0O9WQuM"
 
 // Add TypeScript support for YouTube API
 declare global {
@@ -142,8 +142,8 @@ export function AudioPlayer() {
                     style={{ background: "linear-gradient(135deg, #c8392b, #e67e22)" }}
                     whileHover={isPlayerReady ? { scale: 1.1 } : {}}
                     whileTap={isPlayerReady ? { scale: 0.95 } : {}}
-                    aria-label={isPlaying ? "Stop music" : "Play Circle of Life"}
-                    title={isPlaying ? "Stop music" : "Play Circle of Life"}
+                    aria-label={isPlaying ? "Stop music" : "Play Angel - Akon"}
+                    title={isPlaying ? "Stop music" : "Play Angel - Akon"}
                 >
                     {isPlaying ? (
                         /* Animated equalizer while playing */
