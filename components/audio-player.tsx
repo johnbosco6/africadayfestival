@@ -4,8 +4,8 @@ import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Music } from "lucide-react"
 
-// "Angel" – Akon (Official YouTube)
-const YOUTUBE_ID = "PEMD0O9WQuM"
+// Background music – https://www.youtube.com/watch?v=GibiNy4d4gc
+const YOUTUBE_ID = "GibiNy4d4gc"
 
 // Add TypeScript support for YouTube API
 declare global {
