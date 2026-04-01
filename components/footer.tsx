@@ -136,7 +136,7 @@ export function Footer() {
           </div>
           <div>
             <h4 className="text-lg font-medium mb-4">Contact</h4>
-            <p className="text-sm mb-2 text-gray-300">Jozefa Mackiewicza 23/14 A, Lublin, 20-865</p>
+            <p className="text-sm mb-2 text-gray-300">Ul. Bursztynowa 16/22, 20-576, Lublin</p>
             <p className="text-sm mb-2 text-gray-300">Phone: +48 576 046 862 (English), +48 725 097 661 (Polish)</p>
             <p className="text-sm text-gray-300">Email: abrahamdministryfoundation@gmail.com</p>
           </div>

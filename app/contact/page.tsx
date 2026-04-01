@@ -55,8 +55,8 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent>
                 <p>Abraham Foundation</p>
-                <p>Jozefa Mackiewicza 23/14 A</p>
-                <p>Lublin, 20-865</p>
+                <p>Ul. Bursztynowa 16/22</p>
+                <p>20-576, Lublin</p>
                 <p>Poland</p>
               </CardContent>
             </Card>

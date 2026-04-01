@@ -89,8 +89,8 @@ export default function TermsOfServicePage() {
         <p>
           Abraham D. Ministry Foundation
           <br />
-          Jozefa Mackiewicza 23/14 A<br />
-          Lublin, 20-865
+          Ul. Bursztynowa 16/22<br />
+          20-576, Lublin
           <br />
           Poland
           <br />
