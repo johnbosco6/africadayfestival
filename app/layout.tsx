@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" type="image/png" href="/logo.png" />
-        <meta name="google-site-verification" content="jwbt53VNwEySAucjOB4Rd_a4ZwkFaoGldgX14NmWQnU" />
+        <meta name="google-site-verification" content="Qx72KH_Snv_vcS5dOKRwTQwts-RiJxrbWev5hWa79Lw" />
       </head>
       <body className={`${inter.className} bg-white`}>
         <LanguageProvider>
