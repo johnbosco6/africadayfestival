@@ -110,7 +110,7 @@ export default function PartnersPage() {
 
       <section className="mb-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4 uppercase tracking-tighter text-orange-600">Main Sponsor</h2>
+          <h2 className="text-4xl font-bold mb-4 uppercase tracking-tighter text-orange-600">Exclusive Official Partner</h2>
           <div className="w-24 h-1.5 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-xl text-gray-700 italic font-medium">The primary partner supporting Africa Day Festival 2026</p>
         </div>
@@ -143,7 +143,7 @@ export default function PartnersPage() {
             <div className="text-center">
               <p className="text-2xl font-black text-gray-900 mb-2">Scan to Explore</p>
               <div className="inline-block px-4 py-1.5 bg-orange-600 text-white rounded-full text-sm font-bold tracking-widest uppercase">
-                Official Festival Partner
+                Exclusive Official Partner
               </div>
             </div>
           </div>

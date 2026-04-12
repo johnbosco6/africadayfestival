@@ -105,7 +105,7 @@ export default function Home() {
           <div className="text-center mb-8">
             {slides[currentSlideIndex].type === "sponsor" && (
               <h2 className="text-4xl md:text-7xl font-black mb-4 uppercase tracking-tighter drop-shadow-2xl animate-pulse">
-                Main Sponsors
+                Exclusive Official Partner
               </h2>
             )}
           </div>
@@ -163,9 +163,9 @@ export default function Home() {
       <div className="bg-white py-16 border-t border-gray-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold mb-2">Our Main Sponsors</h2>
+            <h2 className="text-3xl font-bold mb-2">Exclusive Official Partner</h2>
             <div className="w-16 h-1 bg-[#FF5C00] mx-auto mb-4"></div>
-            <p className="text-lg text-gray-600">These are the main sponsors of the event</p>
+            <p className="text-lg text-gray-600">The primary partner supporting Africa Day Festival 2026</p>
           </div>
           <div className="bg-[#FFF5EB] p-8 rounded-2xl shadow-sm border border-orange-100 flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto">
             <Link 
