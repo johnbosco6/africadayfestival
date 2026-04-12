@@ -159,7 +159,12 @@ export default function Home() {
             <p className="text-lg text-gray-600">These are the main sponsors of the event</p>
           </div>
           <div className="bg-[#FFF5EB] p-8 rounded-2xl shadow-sm border border-orange-100 flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto">
-            <div className="relative w-full md:w-3/4 h-[200px] md:h-[300px]">
+            <Link 
+              href="https://www.riamoneytransfer.com/en-cl/ria-transfer-fee-promo/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative w-full md:w-3/4 h-[200px] md:h-[300px] block hover:opacity-90 transition-opacity"
+            >
               <Image
                 src="/sponsors/main-sponsor-banner.png"
                 alt="Main Sponsor Banner"
@@ -167,7 +172,7 @@ export default function Home() {
                 objectFit="contain"
                 className="rounded-lg"
               />
-            </div>
+            </Link>
             <div className="flex flex-col items-center gap-4 w-full md:w-1/4">
               <div className="relative w-40 h-40 md:w-48 md:h-48 shadow-lg rounded-xl overflow-hidden bg-white p-2">
                 <Image

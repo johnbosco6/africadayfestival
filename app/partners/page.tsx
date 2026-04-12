@@ -115,7 +115,12 @@ export default function PartnersPage() {
           <p className="text-xl text-gray-700 italic font-medium">The primary partner supporting Africa Day Festival 2026</p>
         </div>
         <div className="bg-[#FFF5EB] p-8 md:p-12 rounded-[2rem] shadow-xl border border-orange-100 flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto hover:shadow-2xl transition-shadow duration-300">
-          <div className="relative w-full md:w-2/3 h-[300px] md:h-[450px]">
+          <Link 
+            href="https://www.riamoneytransfer.com/en-cl/ria-transfer-fee-promo/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="relative w-full md:w-2/3 h-[300px] md:h-[450px] block hover:opacity-90 transition-opacity"
+          >
             <Image
               src="/sponsors/main-sponsor-banner.png"
               alt="Main Sponsor Banner"
@@ -124,7 +129,7 @@ export default function PartnersPage() {
               className="rounded-3xl"
               priority
             />
-          </div>
+          </Link>
           <div className="flex flex-col items-center gap-8 w-full md:w-1/3">
             <div className="relative w-56 h-56 md:w-72 md:h-72 shadow-2xl rounded-[2.5rem] overflow-hidden bg-white p-4 border-8 border-orange-50/50">
               <Image
