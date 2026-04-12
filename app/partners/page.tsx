@@ -108,6 +108,43 @@ export default function PartnersPage() {
         Partners & Sponsors
       </motion.h1>
 
+      <section className="mb-20">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4 uppercase tracking-tighter text-orange-600">Main Sponsor</h2>
+          <div className="w-24 h-1.5 bg-orange-500 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-700 italic font-medium">The primary partner supporting Africa Day Festival 2026</p>
+        </div>
+        <div className="bg-[#FFF5EB] p-8 md:p-12 rounded-[2rem] shadow-xl border border-orange-100 flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto hover:shadow-2xl transition-shadow duration-300">
+          <div className="relative w-full md:w-2/3 h-[300px] md:h-[450px]">
+            <Image
+              src="/sponsors/main-sponsor-banner.png"
+              alt="Main Sponsor Banner"
+              layout="fill"
+              objectFit="contain"
+              className="rounded-3xl"
+              priority
+            />
+          </div>
+          <div className="flex flex-col items-center gap-8 w-full md:w-1/3">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 shadow-2xl rounded-[2.5rem] overflow-hidden bg-white p-4 border-8 border-orange-50/50">
+              <Image
+                src="/sponsors/main-sponsor-qr.jpeg"
+                alt="Main Sponsor QR Code"
+                layout="fill"
+                objectFit="contain"
+                className="p-2"
+              />
+            </div>
+            <div className="text-center">
+              <p className="text-2xl font-black text-gray-900 mb-2">Scan to Explore</p>
+              <div className="inline-block px-4 py-1.5 bg-orange-600 text-white rounded-full text-sm font-bold tracking-widest uppercase">
+                Official Festival Partner
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="mb-12">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {sponsors.map((sponsor, index) => (

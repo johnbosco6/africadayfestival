@@ -150,6 +150,40 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Main Sponsors */}
+      <div className="bg-white py-16 border-t border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold mb-2">Our Main Sponsors</h2>
+            <div className="w-16 h-1 bg-[#FF5C00] mx-auto mb-4"></div>
+            <p className="text-lg text-gray-600">These are the main sponsors of the event</p>
+          </div>
+          <div className="bg-[#FFF5EB] p-8 rounded-2xl shadow-sm border border-orange-100 flex flex-col md:flex-row items-center gap-8 max-w-5xl mx-auto">
+            <div className="relative w-full md:w-3/4 h-[200px] md:h-[300px]">
+              <Image
+                src="/sponsors/main-sponsor-banner.png"
+                alt="Main Sponsor Banner"
+                layout="fill"
+                objectFit="contain"
+                className="rounded-lg"
+              />
+            </div>
+            <div className="flex flex-col items-center gap-4 w-full md:w-1/4">
+              <div className="relative w-40 h-40 md:w-48 md:h-48 shadow-lg rounded-xl overflow-hidden bg-white p-2">
+                <Image
+                  src="/sponsors/main-sponsor-qr.jpeg"
+                  alt="Sponsor QR Code"
+                  layout="fill"
+                  objectFit="contain"
+                  className="p-1"
+                />
+              </div>
+              <p className="text-sm font-medium text-[#FF5C00] text-center">Scan for more info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Featured Sections Grid */}
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
