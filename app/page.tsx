@@ -13,20 +13,32 @@ import { FestivalTimeline } from "@/components/festival-timeline"
 
 export default function Home() {
   const { t } = useTranslation()
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
+
+  const slides = [
+    { 
+      type: "hero", 
+      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9592.jpg-Xuau5tXD7FIqpJBO9YhkSXdNAAcFaE.jpeg", 
+      duration: 5000 
+    },
+    { 
+      type: "hero", 
+      url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9792.jpg-WG60ywZf56GcS4PiNAoGEvhFthZHTj.jpeg", 
+      duration: 5000 
+    },
+    { 
+      type: "sponsor", 
+      url: "/sponsors/main-sponsor-banner.png", 
+      duration: 10000 
+    },
+  ]
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, []) // Removed unnecessary dependency: images.length
-
-  const images = [
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9592.jpg-Xuau5tXD7FIqpJBO9YhkSXdNAAcFaE.jpeg",
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9792.jpg-WG60ywZf56GcS4PiNAoGEvhFthZHTj.jpeg",
-    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_9877.jpg-mYg3Ra9xSKV2cUOPRXjx7xP87R1MeB.jpeg",
-  ]
+    const timer = setTimeout(() => {
+      setCurrentSlideIndex((prev) => (prev + 1) % slides.length)
+    }, slides[currentSlideIndex].duration)
+    return () => clearTimeout(timer)
+  }, [currentSlideIndex])
 
   const highlights = [
     { icon: Music, title: "Live Music", href: "/program" },
@@ -69,19 +81,19 @@ export default function Home() {
     <div className="relative">
       {/* Hero Section */}
       <div className="relative h-[60vh] md:h-[80vh] overflow-hidden">
-        {images.map((image, index) => (
+        {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentImageIndex
+            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentSlideIndex
               ? "opacity-100 scale-100 translate-y-0 z-10"
-              : index === (currentImageIndex - 1 + images.length) % images.length
+              : index === (currentSlideIndex - 1 + slides.length) % slides.length
                 ? "opacity-0 scale-105 -translate-y-4 z-0"
                 : "opacity-0 scale-95 translate-y-4 z-0"
               }`}
           >
             <Image
-              src={image || "/placeholder.svg"}
-              alt={`Africa Day Festival ${index + 1}`}
+              src={slide.url || "/placeholder.svg"}
+              alt={`Africa Day Festival Slide ${index + 1}`}
               layout="fill"
               objectFit="cover"
               priority={index === 0}
@@ -89,29 +101,26 @@ export default function Home() {
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-black bg-opacity-65 flex flex-col justify-center items-center text-white px-4 py-8 pb-32 md:pb-24 z-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-2">Africa Day 2026</h1>
-            <div className="w-24 h-1 bg-[#FF5C00] mx-auto mb-4"></div>
-            <p className="text-xl md:text-2xl mb-8">Culture | Diversity | Commerce | Celebrations</p>
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white px-4 py-8 pb-32 md:pb-24 z-20">
+          <div className="text-center mb-8">
+            {slides[currentSlideIndex].type === "sponsor" && (
+              <h2 className="text-4xl md:text-7xl font-black mb-4 uppercase tracking-tighter drop-shadow-2xl animate-pulse">
+                Main Sponsors
+              </h2>
+            )}
           </div>
 
-          {/* Glassmorphism Text Element */}
-          <div className="backdrop-blur-md bg-white/20 rounded-lg shadow-sm border border-white/30 p-2 mb-4 max-w-xs text-center">
-            <h2 className="text-white text-sm md:text-base font-medium drop-shadow-sm">
-              Support African Cultural Heritage
-            </h2>
-            <p className="text-white/90 text-xs mt-0.5">Help us preserve African traditions</p>
-          </div>
-
-          <Button
-            className="bg-[#FF5C00] hover:bg-[#FF7A33] text-white mb-12 z-30"
-            onClick={() => {
-              window.location.href = "https://donate.stripe.com/14k5lsh2o9bWe1G144"
-            }}
-          >
-            Donate
-          </Button>
+          {slides[currentSlideIndex].type === "hero" && (
+            <Button
+              className="bg-[#FF5C00] hover:bg-[#FF7A33] text-white text-xl py-6 px-10 h-auto rounded-full shadow-2xl z-30 transition-transform hover:scale-105 active:scale-95"
+              onClick={() => {
+                window.location.href = "https://donate.stripe.com/14k5lsh2o9bWe1G144"
+              }}
+            >
+              Donate
+            </Button>
+          )}
+          
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 w-full max-w-xs md:max-w-md">
             <GlassmorphismCountdown targetDate={new Date("May 29, 2026")} />
           </div>
