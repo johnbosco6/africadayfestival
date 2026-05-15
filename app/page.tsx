@@ -5,7 +5,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { Music, Camera, Utensils, Users, Film, Palette } from "lucide-react"
+import { Music, Camera, Utensils, Users, Film, Palette, Instagram, Facebook, Globe, ExternalLink } from "lucide-react"
 import { Statistics } from "@/components/statistics"
 import { FeaturedEvents } from "@/components/featured-events"
 import { GlassmorphismCountdown } from "@/components/glassmorphism-countdown"
@@ -193,6 +193,86 @@ export default function Home() {
                 />
               </div>
               <p className="text-sm font-medium text-[#FF5C00] text-center">Scan for more info</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Our Sponsors & Partners */}
+      <div className="bg-[#FAFAFA] py-16 border-t border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-2">Our Sponsors & Partners</h2>
+            <div className="w-16 h-1 bg-[#FF5C00] mx-auto mb-4"></div>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="w-full md:w-1/3">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src="/sponsors/AHF-Logo_Poland_Black.jpg"
+                      alt="AHF Poland Logo"
+                      layout="fill"
+                      objectFit="contain"
+                      className="p-2"
+                    />
+                  </div>
+                </div>
+                <div className="w-full md:w-2/3 space-y-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">AHF Poland</h3>
+                    <p className="text-gray-600">AIDS Healthcare Foundation (AHF) is a global non-profit organization providing cutting-edge medicine and advocacy to over 1.9 million people in 45 countries.</p>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <Link 
+                      href="https://ahf.org/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                    >
+                      <Globe className="w-5 h-5 text-[#FF5C00]" />
+                      <span>Official Website</span>
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                    
+                    <Link 
+                      href="https://darmowytestnaHIV.pl" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                    >
+                      <div className="w-5 h-5 flex items-center justify-center bg-[#FF5C00] text-white rounded-full text-[10px] font-bold">HIV</div>
+                      <span>Free HIV Testing</span>
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                    
+                    <Link 
+                      href="https://www.instagram.com/ahfpoland/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                    >
+                      <Instagram className="w-5 h-5 text-[#E4405F]" />
+                      <span>Instagram</span>
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                    
+                    <Link 
+                      href="https://www.facebook.com/AHFPoland/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                    >
+                      <Facebook className="w-5 h-5 text-[#1877F2]" />
+                      <span>Facebook</span>
+                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

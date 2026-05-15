@@ -92,6 +92,12 @@ const sponsors = [
     logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/images-OkPNj27Qy1GRO1JIoVLr4sn8LGeaSF.png",
     website: "https://pizzaloverlublin.pl/",
   },
+  {
+    name: "AHF Poland",
+    description: "AIDS Healthcare Foundation - Global Non-profit Organization",
+    logo: "/sponsors/AHF-Logo_Poland_Black.jpg",
+    website: "https://ahf.org/",
+  },
 ]
 
 export default function PartnersPage() {
