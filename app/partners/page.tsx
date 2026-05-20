@@ -98,6 +98,12 @@ const sponsors = [
     logo: "/sponsors/AHF-Logo_Poland_Black.jpg",
     website: "https://ahf.org/",
   },
+  {
+    name: "Instytut Aktywizacji i Rozwoju Społecznego & Prusa2",
+    description: "Institute of Animation and Social Development & Prusa2 - Youth Empowerment & Community Hub",
+    logo: "/sponsors/logo-academy.jpeg",
+    website: "https://iairs.pl/",
+  },
 ]
 
 export default function PartnersPage() {

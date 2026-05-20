@@ -206,72 +206,123 @@ export default function Home() {
             <div className="w-16 h-1 bg-[#FF5C00] mx-auto mb-4"></div>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <div className="w-full md:w-1/3">
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src="/sponsors/AHF-Logo_Poland_Black.jpg"
-                      alt="AHF Poland Logo"
-                      layout="fill"
-                      objectFit="contain"
-                      className="p-2"
-                    />
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* AHF Poland */}
+            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div className="relative h-32 w-full mb-6">
+                  <Image
+                    src="/sponsors/AHF-Logo_Poland_Black.jpg"
+                    alt="AHF Poland Logo"
+                    layout="fill"
+                    objectFit="contain"
+                    className="p-2"
+                  />
                 </div>
-                <div className="w-full md:w-2/3 space-y-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">AHF Poland</h3>
-                    <p className="text-gray-600">AIDS Healthcare Foundation (AHF) is a global non-profit organization providing cutting-edge medicine and advocacy to over 1.9 million people in 45 countries.</p>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Link 
-                      href="https://ahf.org/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
-                    >
-                      <Globe className="w-5 h-5 text-[#FF5C00]" />
-                      <span>Official Website</span>
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                    
-                    <Link 
-                      href="https://darmowytestnaHIV.pl" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
-                    >
-                      <div className="w-5 h-5 flex items-center justify-center bg-[#FF5C00] text-white rounded-full text-[10px] font-bold">HIV</div>
-                      <span>Free HIV Testing</span>
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                    
-                    <Link 
-                      href="https://www.instagram.com/ahfpoland/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
-                    >
-                      <Instagram className="w-5 h-5 text-[#E4405F]" />
-                      <span>Instagram</span>
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                    
-                    <Link 
-                      href="https://www.facebook.com/AHFPoland/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
-                    >
-                      <Facebook className="w-5 h-5 text-[#1877F2]" />
-                      <span>Facebook</span>
-                      <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </Link>
-                  </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">AHF Poland</h3>
+                <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                  AIDS Healthcare Foundation (AHF) is a global non-profit organization providing cutting-edge medicine and advocacy to over 1.9 million people in 45 countries.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-gray-100">
+                <Link 
+                  href="https://ahf.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                >
+                  <Globe className="w-4 h-4 text-[#FF5C00]" />
+                  <span>Website</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+                
+                <Link 
+                  href="https://darmowytestnaHIV.pl" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                >
+                  <div className="w-4 h-4 flex items-center justify-center bg-[#FF5C00] text-white rounded-full text-[8px] font-bold">HIV</div>
+                  <span>Free Test</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+                
+                <Link 
+                  href="https://www.instagram.com/ahfpoland/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                >
+                  <Instagram className="w-4 h-4 text-[#E4405F]" />
+                  <span>Instagram</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+                
+                <Link 
+                  href="https://www.facebook.com/AHFPoland/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                >
+                  <Facebook className="w-4 h-4 text-[#1877F2]" />
+                  <span>Facebook</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Institute of Animation & Prusa2 (Joint Sponsor Card) */}
+            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div className="relative h-32 w-full mb-6">
+                  <Image
+                    src="/sponsors/logo-academy.jpeg"
+                    alt="IAIRS & Prusa2 Logo"
+                    layout="fill"
+                    objectFit="contain"
+                    className="p-1"
+                  />
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Instytut Aktywizacji i Rozwoju Społecznego & Prusa2</h3>
+                <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                  A joint collaboration supporting social development, active citizenship, youth empowerment, workshops, and creative community spaces in Lublin during the Africa Day Festival.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-gray-100">
+                <Link 
+                  href="https://iairs.pl/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                >
+                  <Globe className="w-4 h-4 text-[#FF5C00]" />
+                  <span>IAiRS Website</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+                
+                <Link 
+                  href="https://www.facebook.com/iairs.lublin/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium group"
+                >
+                  <Facebook className="w-4 h-4 text-[#1877F2]" />
+                  <span>IAiRS Facebook</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+
+                <Link 
+                  href="https://www.facebook.com/prusa2lublin/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium col-span-2 group"
+                >
+                  <Facebook className="w-4 h-4 text-[#1877F2]" />
+                  <span>Prusa2 Facebook</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
               </div>
             </div>
           </div>
