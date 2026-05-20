@@ -49,6 +49,12 @@ const allBlogPosts = [
   // Other blog posts data...
 ]
 
+export async function generateStaticParams() {
+  return allBlogPosts.map((post) => ({
+    slug: post.slug,
+  }))
+}
+
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const { slug } = params
 

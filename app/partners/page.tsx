@@ -104,6 +104,12 @@ const sponsors = [
     logo: "/sponsors/logo-academy.jpeg",
     website: "https://iairs.pl/",
   },
+  {
+    name: "Zapora",
+    description: "Hieronim Dekutowski 'Zapora' Cultural & Scouting Initiative - dedicated to youth empowerment, historical heritage, and community leadership in Lublin.",
+    logo: "/sponsors/zapora.jpg",
+    website: "https://pl.wikipedia.org/wiki/Hieronim_Dekutowski",
+  },
 ]
 
 export default function PartnersPage() {

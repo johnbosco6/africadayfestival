@@ -206,7 +206,7 @@ export default function Home() {
             <div className="w-16 h-1 bg-[#FF5C00] mx-auto mb-4"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* AHF Poland */}
             <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col justify-between">
               <div>
@@ -321,6 +321,38 @@ export default function Home() {
                 >
                   <Facebook className="w-4 h-4 text-[#1877F2]" />
                   <span>Prusa2 Facebook</span>
+                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Zapora */}
+            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col justify-between">
+              <div>
+                <div className="relative h-32 w-full mb-6">
+                  <Image
+                    src="/sponsors/zapora.jpg"
+                    alt="Zapora Logo"
+                    layout="fill"
+                    objectFit="contain"
+                    className="p-1"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Zapora</h3>
+                <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+                  Hieronim Dekutowski &ldquo;Zapora&rdquo; Cultural &amp; Scouting Initiative &ndash; dedicated to nurturing civic values, youth leadership, and preserving local historical heritage in the Lublin region.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-3 pt-4 border-t border-gray-100">
+                <Link 
+                  href="https://pl.wikipedia.org/wiki/Hieronim_Dekutowski" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs text-gray-700 hover:text-[#FF5C00] transition-colors font-medium col-span-2 group"
+                >
+                  <Globe className="w-4 h-4 text-[#FF5C00]" />
+                  <span>Historical Profile</span>
                   <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </Link>
               </div>

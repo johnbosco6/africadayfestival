@@ -68,6 +68,12 @@ const categoryTitles = {
   interviews: "Artist Interviews",
 }
 
+export async function generateStaticParams() {
+  return Object.keys(categoryTitles).map((category) => ({
+    category: category,
+  }))
+}
+
 export default function CategoryPage({ params }: { params: { category: string } }) {
   const { category } = params
 
